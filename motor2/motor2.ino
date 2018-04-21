@@ -34,6 +34,8 @@ int rightError;
 int leftError;
 int preSensorState = S1_IN_S2_IN;
 int clean = 1; // TRUE
+int Ldetector=0;
+int Rdetector=0;
 
 void setup()
 {
@@ -48,7 +50,6 @@ void setup()
 void runStraight(){
     encoder_2_1.move(50,abs(50)); 
     encoder_2_2.move(50,abs(50)); // DISTANCE + speed
-    
 }
 
 void backUp(){
@@ -71,30 +72,59 @@ void turnRight(){
 
 
 void motorPIDcontrol(){
-  encoder_2_1.move(50,abs(50)+leftError); 
-  encoder_2_2.move(50,abs(50)+rightError); // DISTANCE + speed
-  
-}
-void calculatePID()
-{
-//  P = error;
-//  I = I + error;
-//  D = error-previousError;
-//  PIDvalue = (Kp*P) + (Ki*I) + (Kd*D);
-//  previousError = error;
-  
-  int currSensorState = lineFinder.readSensors();
-  
-  if (clean){
-    int preSensorState = currSensorState;
-  } else{
-    
-  }
-  
-  
+  encoder_2_1.move(50,abs(50 + Ldetector * 50); 
+  encoder_2_2.move(50,abs(50 + Rdetector * 50); // DISTANCE + speed
   
 }
 
+void calculatePID()
+{
+  int sensorState = lineFinder.readSensors();
+  switch(sensorState)
+  {
+    case S1_IN_S2_IN: {
+      Serial.println("Sensor 1 and 2 are inside of black line");  
+      if(Ldetector!=0){Ldetector=0;}
+      if(Rdetector!=0){Rdetector=0;}
+      break;
+    }
+    case S1_IN_S2_OUT: {
+      Serial.println("Sensor 2 is outside of black line"); 
+      if(Ldetector!=0){Ldetector=0;}
+      Rdetector+=1;
+      delay(50);
+      break;
+    }
+    case S1_OUT_S2_IN: {
+      Serial.println("Sensor 1 is outside of black line");
+      if(Rdetector!=0){Rdetector=0;}
+      Ldetector+=1;
+      delay(50);
+      break;
+    }
+    case S1_OUT_S2_OUT: {
+      Serial.println("Sensor 1 and 2 are outside of black line");
+     if(Ldetector!=0) Ldetector+=1;
+     if(Rdetector!=0) Rdetector+=1;
+     if(Ldetector==0&&Rdetector==0){backUp();}
+      delay(50);
+      break;
+    }  
+    default: break;
+  }  
+}
+  
+  //int currSensorState = lineFinder.readSensors();
+  
+ // if (clean){
+ //   int preSensorState = currSensorState;
+ // } else{
+    
+ // }
+  
+  
+  
+//}
 
 
 void loop()
@@ -102,37 +132,7 @@ void loop()
   Serial.print("Distance : ");
   Serial.print(ultraSensor.distanceCm() );
   calculatePID();
-
-  int sensorState = lineFinder.readSensors();
-  switch(sensorState)
-  {
-    case S1_IN_S2_IN: {
-      Serial.println("Sensor 1 and 2 are inside of black line"); 
-      runStraight(); 
-      
-      break;
-    }
-    case S1_IN_S2_OUT: {
-      Serial.println("Sensor 2 is outside of black line"); 
-      
-      turnRight();
-      delay(50);
-      break;
-    }
-    case S1_OUT_S2_IN: {
-      Serial.println("Sensor 1 is outside of black line");
-      turnLeft();
-      delay(50);
-      break;
-    }
-    case S1_OUT_S2_OUT: {
-      Serial.println("Sensor 1 and 2 are outside of black line");
-      backUp();
-      delay(50);
-      break;
-    }
-    default: break;
-  }
+  motorPIDcontrol();
 
 
    
@@ -153,4 +153,3 @@ void loop()
 //  Hand.run(-250); // hand open
 //  Hand.run(0);
 }
-
