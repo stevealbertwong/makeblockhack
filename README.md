@@ -5,7 +5,8 @@
 This is a project using make block robot set for hackathon at HKUST. 
 
 ![alt text]
-(https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic.jpg)
+(https://raw.githubusercontent.com/stevealbertwong/stevealbertwong.github.io/master/assets/miscellaneous/pic.jpg)
+
 
 The physical building of the robot is very similar to the assembly instructions.pdf in the repo.
 
