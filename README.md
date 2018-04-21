@@ -7,8 +7,6 @@ This is a project using make block robot set for hackathon at HKUST.
 ![alt text](https://raw.githubusercontent.com/stevealbertwong/stevealbertwong.github.io/master/assets/miscellaneous/pic.jpg)
 
 
-![alt text](https://raw.githubusercontent.com/stevealbertwong/stevealbertwong.github.io/master/assets/miscellaneous/router_port_forwarding.png)
-
 The physical building of the robot is very similar to the assembly instructions.pdf in the repo.
 
 [here](http://www.instructables.com/id/Learning-Experience-and-Review-the-Makeblock-3-in-/) more on using mblock (makeblock IDE). You could also using arduino IDE to compile with makeblock library. But it is much more convenient to use mblock to compile the code.
@@ -20,8 +18,7 @@ http://www.instructables.com/id/Line-Follower-Robot-PID-Control-Android-Setup/
 
 We also used [IFTTT](https://ifttt.com/maker_webhooks) webhooks and wifi makeblock module to send email to our gmail account with logic in microcontroller. 
 
-![alt text]
-(https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/makebot_api_IFTTT.png)
+![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/makebot_api_IFTTT.png)
 
 
 
