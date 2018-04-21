@@ -7,6 +7,7 @@ This is a project using make block robot set for hackathon at HKUST.
 ![alt text]
 (https://raw.githubusercontent.com/stevealbertwong/stevealbertwong.github.io/master/assets/miscellaneous/pic.jpg)
 
+![alt text](https://raw.githubusercontent.com/stevealbertwong/stevealbertwong.github.io/master/assets/miscellaneous/router_port_forwarding.png)
 
 The physical building of the robot is very similar to the assembly instructions.pdf in the repo.
 
