@@ -5,7 +5,7 @@
 This is a project using make block robot set for hackathon at HKUST. 
 
 ![alt text]
-(https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic.jpg)
+(https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic.jpg)
 
 The physical building of the robot is very similar to the assembly instructions.pdf in the repo.
 
@@ -19,7 +19,7 @@ http://www.instructables.com/id/Line-Follower-Robot-PID-Control-Android-Setup/
 We also used [IFTTT](https://ifttt.com/maker_webhooks) webhooks and wifi makeblock module to send email to our gmail account with logic in microcontroller. 
 
 ![alt text]
-(https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/makebot_api_IFTTT.png)
+(https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/makebot_api_IFTTT.png)
 
 
 
