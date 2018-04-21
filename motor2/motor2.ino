@@ -72,8 +72,17 @@ void turnRight(){
 
 
 void motorPIDcontrol(){
-  encoder_2_1.move(50,abs(50 + Ldetector * 50); 
-  encoder_2_2.move(50,abs(50 + Rdetector * 50); // DISTANCE + speed
+//  int lerror = Ldetector * 50;
+//  int rerror = Rdetector * 50;
+//  Serial.print("lerror : ");
+//  Serial.print(lerror);
+//  Serial.print("rerror : ");
+//  Serial.print(rerror);
+//  encoder_2_1.move(50,abs(50 + lerror)); 
+//  encoder_2_2.move(50,abs(50 + rerror)); // DISTANCE + speed
+//  encoder_2_1.runSpeed(0);
+  encoder_2_1.move(50,abs(10)); 
+  encoder_2_2.move(50,abs(1000)); 
   
 }
 
@@ -92,14 +101,14 @@ void calculatePID()
       Serial.println("Sensor 2 is outside of black line"); 
       if(Ldetector!=0){Ldetector=0;}
       Rdetector+=1;
-      delay(50);
+//      delay(50);
       break;
     }
     case S1_OUT_S2_IN: {
       Serial.println("Sensor 1 is outside of black line");
       if(Rdetector!=0){Rdetector=0;}
       Ldetector+=1;
-      delay(50);
+//      delay(50);
       break;
     }
     case S1_OUT_S2_OUT: {
@@ -107,7 +116,7 @@ void calculatePID()
      if(Ldetector!=0) Ldetector+=1;
      if(Rdetector!=0) Rdetector+=1;
      if(Ldetector==0&&Rdetector==0){backUp();}
-      delay(50);
+//      delay(50);
       break;
     }  
     default: break;
@@ -133,6 +142,10 @@ void loop()
   Serial.print(ultraSensor.distanceCm() );
   calculatePID();
   motorPIDcontrol();
+  Serial.print("Ldetector : ");
+  Serial.print(Ldetector);
+  Serial.print("Rdetector : ");
+  Serial.print(Rdetector);
 
 
    
