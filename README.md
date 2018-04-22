@@ -1,9 +1,9 @@
 # Makeblock Hack
 
 # Table of Contents
-&nbsp;[How we build it](https://github.com/stevealbertwong/proxy/blob/master/README.md#How-we-build-it)  <br/> 
-&nbsp;[PID control](https://github.com/stevealbertwong/proxy/blob/master/README.md#PID-control-to-steer)  <br/> 
-&nbsp;[Reference](https://github.com/stevealbertwong/proxy/blob/master/README.md#Reference)  <br/> 
+&nbsp;[How we build it](https://github.com/stevealbertwong/makeblockhack/blob/master/README.md#How-we-build-it)  <br/> 
+&nbsp;[PID control](https://github.com/stevealbertwong/makeblockhack/blob/master/README.md#PID-control-to-steer)  <br/> 
+&nbsp;[Reference](https://github.com/stevealbertwong/makeblockhack/blob/master/README.md#Reference)  <br/> 
 
 --- 
 
