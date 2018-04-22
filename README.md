@@ -13,10 +13,10 @@ The physical building of the robot is very similar to the assembly instructions.
 Check out our demo of our line following makebot robot that use PID controller feed back line detection error to correct steering angle [here](https://youtu.be/C-BMuusDLDE). It could also grap your water bottle and bring it to you!
 
 ![alt text](https://raw.githubusercontent.com/stevealbertwong/stevealbertwong.github.io/master/assets/miscellaneous/pic1.jpg)
-![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic1.jpg)
-![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic2.jpg)
-![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic3.jpg)
-![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic4.jpg)
+![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic1.png)
+![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic2.png)
+![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic3.png)
+![alt text](https://raw.githubusercontent.com/stevealbertwong/makeblockhack/master/pic/pic4.png)
 
 
 We also used [IFTTT](https://ifttt.com/maker_webhooks) webhooks and wifi makeblock module to send email to our gmail account with logic in microcontroller. 
